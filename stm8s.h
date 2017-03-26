@@ -2,6 +2,32 @@
 /* Modified from https://github.com/vdudouyt/sdcc-examples-stm8/blob/master/stm8l.h */
 /* Modified or additional blocks designated by " - BobR" */
 
+/* INTERRUPT VECTORS - BobR */
+#define TLI_vector			0x00
+#define AWU_vector			0x01
+#define CLK_vector			0x02
+#define EXTI0_vector		0x03
+#define EXTI1_vector		0x04
+#define EXTI2_vector		0x05
+#define EXTI3_vector		0x06
+#define EXTI4_vector		0x07
+#define SPI_vector			0x0A
+#define TIM1_OVF_vector		0x0B
+#define TIM1_CAPCOM_vector	0x0C
+#define TIM2_OVF_vector		0x0D
+#define TIM2_CAPCOM_vector	0x0E
+#define UART1_TXC_vector	0x11
+#define UART1_RXF_vector	0x12
+#define I2C_vector			0x13
+#define ADC1_vector			0x16
+#define TIM4_vector			0x17
+#define FLASH_vector		0x18
+
+/* OPTION BYTES - BobR */
+/* I don't know that these can be set in software */
+#define OPT2			*(unsigned char*)0x4803
+#define NOPT2			*(unsigned char*)0x4804
+
 /* GPIO */
 #define PA_ODR 			*(unsigned char*)0x5000
 #define PA_IDR 			*(unsigned char*)0x5001
